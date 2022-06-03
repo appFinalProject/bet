@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">賭博</string>
+    <string-array name="bigor">
+        <item>比大</item>
+        <item>比小</item>
+    </string-array>
+    <string-array name="spin">
+        <item>單數</item>
+        <item>雙數</item>
+    </string-array>
+</resources>
