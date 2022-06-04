@@ -19,17 +19,17 @@ import java.util.Random;
 
 public class MainActivity2 extends AppCompatActivity implements TextWatcher,RadioGroup.OnCheckedChangeListener,View.OnClickListener, AdapterView.OnItemSelectedListener {
 
-    RadioGroup mul;
+    RadioGroup multt;
     Spinner bigor;
-    TextView money;
+    TextView money500;
     String[] place={"比大","比小"};
     Toast tos;
-    Button button;
-    EditText edtmoney;
+    Button poi;
+    EditText edtmonyy;
     double mon;
     double count=500;
     int pos=0;
-    TextView win;
+    TextView winnig;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,17 +45,17 @@ public class MainActivity2 extends AppCompatActivity implements TextWatcher,Radi
         bdr.show();
 
         tos=Toast.makeText(this,"",Toast.LENGTH_SHORT);
-        money = findViewById(R.id.money);
+        money500 = findViewById(R.id.money500);
         bigor=findViewById(R.id.bigor);
         bigor.setOnItemSelectedListener(this);
-        button=findViewById(R.id.button);
-        button.setOnClickListener(this);
-        edtmoney= findViewById(R.id.edtmoney);
-        edtmoney.addTextChangedListener(this);
-        mul=findViewById(R.id.mul);
-        mul.setOnCheckedChangeListener(this);
+        poi=findViewById(R.id.poi);
+        poi.setOnClickListener(this);
+        edtmonyy= findViewById(R.id.edtmonyy);
+        edtmonyy.addTextChangedListener(this);
+        multt=findViewById(R.id.multt);
+        multt.setOnCheckedChangeListener(this);
 
-        win=findViewById(R.id.win);
+        winnig=findViewById(R.id.winning);
     }
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -75,7 +75,7 @@ public class MainActivity2 extends AppCompatActivity implements TextWatcher,Radi
 
     @Override
     public void onClick(View view) {
-        if (edtmoney.length() == 0) {
+        if (edtmonyy.length() == 0) {
             Toast tos = Toast.makeText(this, "請輸入押金", Toast.LENGTH_SHORT);
         } else {
             Random x = new Random();
@@ -84,102 +84,102 @@ public class MainActivity2 extends AppCompatActivity implements TextWatcher,Radi
             int you = z.nextInt(6);
             switch (me) {
                 case 0:
-                    findViewById(R.id.image).setVisibility(View.VISIBLE);
-                    findViewById(R.id.image2).setVisibility(View.GONE);
-                    findViewById(R.id.image3).setVisibility(View.GONE);
-                    findViewById(R.id.image4).setVisibility(View.GONE);
-                    findViewById(R.id.image5).setVisibility(View.GONE);
-                    findViewById(R.id.image6).setVisibility(View.GONE);
+                    findViewById(R.id.p1).setVisibility(View.VISIBLE);
+                    findViewById(R.id.p2).setVisibility(View.GONE);
+                    findViewById(R.id.p3).setVisibility(View.GONE);
+                    findViewById(R.id.p4).setVisibility(View.GONE);
+                    findViewById(R.id.p5).setVisibility(View.GONE);
+                    findViewById(R.id.p6).setVisibility(View.GONE);
                     break;
                 case 1:
-                    findViewById(R.id.image2).setVisibility(View.VISIBLE);
-                    findViewById(R.id.image).setVisibility(View.GONE);
-                    findViewById(R.id.image3).setVisibility(View.GONE);
-                    findViewById(R.id.image4).setVisibility(View.GONE);
-                    findViewById(R.id.image5).setVisibility(View.GONE);
-                    findViewById(R.id.image6).setVisibility(View.GONE);
+                    findViewById(R.id.p2).setVisibility(View.VISIBLE);
+                    findViewById(R.id.p1).setVisibility(View.GONE);
+                    findViewById(R.id.p3).setVisibility(View.GONE);
+                    findViewById(R.id.p4).setVisibility(View.GONE);
+                    findViewById(R.id.p5).setVisibility(View.GONE);
+                    findViewById(R.id.p6).setVisibility(View.GONE);
                     break;
                 case 2:
-                    findViewById(R.id.image3).setVisibility(View.VISIBLE);
-                    findViewById(R.id.image).setVisibility(View.GONE);
-                    findViewById(R.id.image2).setVisibility(View.GONE);
-                    findViewById(R.id.image4).setVisibility(View.GONE);
-                    findViewById(R.id.image5).setVisibility(View.GONE);
-                    findViewById(R.id.image6).setVisibility(View.GONE);
+                    findViewById(R.id.p3).setVisibility(View.VISIBLE);
+                    findViewById(R.id.p1).setVisibility(View.GONE);
+                    findViewById(R.id.p2).setVisibility(View.GONE);
+                    findViewById(R.id.p4).setVisibility(View.GONE);
+                    findViewById(R.id.p5).setVisibility(View.GONE);
+                    findViewById(R.id.p6).setVisibility(View.GONE);
                     break;
                 case 3:
-                    findViewById(R.id.image4).setVisibility(View.VISIBLE);
-                    findViewById(R.id.image).setVisibility(View.GONE);
-                    findViewById(R.id.image2).setVisibility(View.GONE);
-                    findViewById(R.id.image3).setVisibility(View.GONE);
-                    findViewById(R.id.image5).setVisibility(View.GONE);
-                    findViewById(R.id.image6).setVisibility(View.GONE);
+                    findViewById(R.id.p4).setVisibility(View.VISIBLE);
+                    findViewById(R.id.p1).setVisibility(View.GONE);
+                    findViewById(R.id.p2).setVisibility(View.GONE);
+                    findViewById(R.id.p3).setVisibility(View.GONE);
+                    findViewById(R.id.p5).setVisibility(View.GONE);
+                    findViewById(R.id.p6).setVisibility(View.GONE);
                     break;
                 case 4:
-                    findViewById(R.id.image5).setVisibility(View.VISIBLE);
-                    findViewById(R.id.image).setVisibility(View.GONE);
-                    findViewById(R.id.image2).setVisibility(View.GONE);
-                    findViewById(R.id.image3).setVisibility(View.GONE);
-                    findViewById(R.id.image4).setVisibility(View.GONE);
-                    findViewById(R.id.image6).setVisibility(View.GONE);
+                    findViewById(R.id.p5).setVisibility(View.VISIBLE);
+                    findViewById(R.id.p1).setVisibility(View.GONE);
+                    findViewById(R.id.p2).setVisibility(View.GONE);
+                    findViewById(R.id.p3).setVisibility(View.GONE);
+                    findViewById(R.id.p4).setVisibility(View.GONE);
+                    findViewById(R.id.p6).setVisibility(View.GONE);
                     break;
                 case 5:
-                    findViewById(R.id.image6).setVisibility(View.VISIBLE);
-                    findViewById(R.id.image).setVisibility(View.GONE);
-                    findViewById(R.id.image2).setVisibility(View.GONE);
-                    findViewById(R.id.image3).setVisibility(View.GONE);
-                    findViewById(R.id.image4).setVisibility(View.GONE);
-                    findViewById(R.id.image5).setVisibility(View.GONE);
+                    findViewById(R.id.p6).setVisibility(View.VISIBLE);
+                    findViewById(R.id.p1).setVisibility(View.GONE);
+                    findViewById(R.id.p2).setVisibility(View.GONE);
+                    findViewById(R.id.p3).setVisibility(View.GONE);
+                    findViewById(R.id.p4).setVisibility(View.GONE);
+                    findViewById(R.id.p5).setVisibility(View.GONE);
                     break;
             }
             switch (you) {
                 case 0:
-                    findViewById(R.id.imageView).setVisibility(View.VISIBLE);
-                    findViewById(R.id.imageView2).setVisibility(View.GONE);
-                    findViewById(R.id.imageView3).setVisibility(View.GONE);
-                    findViewById(R.id.imageView4).setVisibility(View.GONE);
-                    findViewById(R.id.imageView5).setVisibility(View.GONE);
-                    findViewById(R.id.imageView6).setVisibility(View.GONE);
+                    findViewById(R.id.i1).setVisibility(View.VISIBLE);
+                    findViewById(R.id.i2).setVisibility(View.GONE);
+                    findViewById(R.id.i3).setVisibility(View.GONE);
+                    findViewById(R.id.i4).setVisibility(View.GONE);
+                    findViewById(R.id.i5).setVisibility(View.GONE);
+                    findViewById(R.id.i6).setVisibility(View.GONE);
                     break;
                 case 1:
-                    findViewById(R.id.imageView2).setVisibility(View.VISIBLE);
-                    findViewById(R.id.imageView).setVisibility(View.GONE);
-                    findViewById(R.id.imageView3).setVisibility(View.GONE);
-                    findViewById(R.id.imageView4).setVisibility(View.GONE);
-                    findViewById(R.id.imageView5).setVisibility(View.GONE);
-                    findViewById(R.id.imageView6).setVisibility(View.GONE);
+                    findViewById(R.id.i2).setVisibility(View.VISIBLE);
+                    findViewById(R.id.i1).setVisibility(View.GONE);
+                    findViewById(R.id.i3).setVisibility(View.GONE);
+                    findViewById(R.id.i4).setVisibility(View.GONE);
+                    findViewById(R.id.i5).setVisibility(View.GONE);
+                    findViewById(R.id.i6).setVisibility(View.GONE);
                     break;
                 case 2:
-                    findViewById(R.id.imageView3).setVisibility(View.VISIBLE);
-                    findViewById(R.id.imageView2).setVisibility(View.GONE);
-                    findViewById(R.id.imageView).setVisibility(View.GONE);
-                    findViewById(R.id.imageView4).setVisibility(View.GONE);
-                    findViewById(R.id.imageView5).setVisibility(View.GONE);
-                    findViewById(R.id.imageView6).setVisibility(View.GONE);
+                    findViewById(R.id.i3).setVisibility(View.VISIBLE);
+                    findViewById(R.id.i2).setVisibility(View.GONE);
+                    findViewById(R.id.i1).setVisibility(View.GONE);
+                    findViewById(R.id.i4).setVisibility(View.GONE);
+                    findViewById(R.id.i5).setVisibility(View.GONE);
+                    findViewById(R.id.i6).setVisibility(View.GONE);
                     break;
                 case 3:
-                    findViewById(R.id.imageView4).setVisibility(View.VISIBLE);
-                    findViewById(R.id.imageView2).setVisibility(View.GONE);
-                    findViewById(R.id.imageView3).setVisibility(View.GONE);
-                    findViewById(R.id.imageView).setVisibility(View.GONE);
-                    findViewById(R.id.imageView5).setVisibility(View.GONE);
-                    findViewById(R.id.imageView6).setVisibility(View.GONE);
+                    findViewById(R.id.i4).setVisibility(View.VISIBLE);
+                    findViewById(R.id.i2).setVisibility(View.GONE);
+                    findViewById(R.id.i3).setVisibility(View.GONE);
+                    findViewById(R.id.i1).setVisibility(View.GONE);
+                    findViewById(R.id.i5).setVisibility(View.GONE);
+                    findViewById(R.id.i6).setVisibility(View.GONE);
                     break;
                 case 4:
-                    findViewById(R.id.imageView5).setVisibility(View.VISIBLE);
-                    findViewById(R.id.imageView2).setVisibility(View.GONE);
-                    findViewById(R.id.imageView3).setVisibility(View.GONE);
-                    findViewById(R.id.imageView4).setVisibility(View.GONE);
-                    findViewById(R.id.imageView).setVisibility(View.GONE);
-                    findViewById(R.id.imageView6).setVisibility(View.GONE);
+                    findViewById(R.id.i5).setVisibility(View.VISIBLE);
+                    findViewById(R.id.i2).setVisibility(View.GONE);
+                    findViewById(R.id.i3).setVisibility(View.GONE);
+                    findViewById(R.id.i4).setVisibility(View.GONE);
+                    findViewById(R.id.i1).setVisibility(View.GONE);
+                    findViewById(R.id.i6).setVisibility(View.GONE);
                     break;
                 case 5:
-                    findViewById(R.id.imageView6).setVisibility(View.VISIBLE);
-                    findViewById(R.id.imageView2).setVisibility(View.GONE);
-                    findViewById(R.id.imageView3).setVisibility(View.GONE);
-                    findViewById(R.id.imageView4).setVisibility(View.GONE);
-                    findViewById(R.id.imageView5).setVisibility(View.GONE);
-                    findViewById(R.id.imageView).setVisibility(View.GONE);
+                    findViewById(R.id.i6).setVisibility(View.VISIBLE);
+                    findViewById(R.id.i2).setVisibility(View.GONE);
+                    findViewById(R.id.i3).setVisibility(View.GONE);
+                    findViewById(R.id.i4).setVisibility(View.GONE);
+                    findViewById(R.id.i5).setVisibility(View.GONE);
+                    findViewById(R.id.i1).setVisibility(View.GONE);
                     break;
             }
 
@@ -200,12 +200,12 @@ public class MainActivity2 extends AppCompatActivity implements TextWatcher,Radi
                     }
             }
 
-            money.setText("目前金額:" + count+"元");
+            money500.setText("目前金額:" + count+"元");
             if(count>=2000){
-                win.setVisibility(View.VISIBLE);
-                win.setText("您已過關!");
-                win.setTextColor(Color.parseColor("#E91E63"));
-                win.setBackgroundColor(Color.parseColor("#FAF493"));
+                winnig.setVisibility(View.VISIBLE);
+                winnig.setText("  您已過關!\n   返回玩猜密碼");
+                winnig.setTextColor(Color.parseColor("#E91E63"));
+                winnig.setBackgroundColor(Color.parseColor("#FAF493"));
             }
         }
     }
@@ -234,7 +234,7 @@ public class MainActivity2 extends AppCompatActivity implements TextWatcher,Radi
     @Override
     public void onCheckedChanged(RadioGroup group, int checkedId) {
 
-        String str=edtmoney.getText().toString();
+        String str=edtmonyy.getText().toString();
         try{
             mon=Double.parseDouble(str);
         }catch (Exception e){
@@ -244,14 +244,14 @@ public class MainActivity2 extends AppCompatActivity implements TextWatcher,Radi
         int me = x.nextInt(6);
         Random z = new Random();
         int you = z.nextInt(6);
-        switch (mul.getCheckedRadioButtonId()){
-            case R.id.x3:
+        switch (multt.getCheckedRadioButtonId()){
+            case R.id.xx3:
                 mon*=3;
                 break;
-            case R.id.x5:
+            case R.id.xx5:
                 mon*=5;
                 break;
-            case R.id.x10:
+            case R.id.xx10:
                 mon*=10;
                 break;
         }

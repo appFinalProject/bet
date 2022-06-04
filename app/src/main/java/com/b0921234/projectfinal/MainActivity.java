@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button single=findViewById(R.id.single);
 
         TextView rule=findViewById(R.id.rule);
-        rule.setText("遊戲說明:\n\n您擁有本金500元，遊玩以下2關遊戲，使您的本金皆達到2000元，即為過關");  //顯示遊戲規則
+        rule.setText("遊戲說明:\n\n您擁有本金500元，遊玩比大小，使本金達到2000元，即為過關\n再玩猜密碼，在限定次數內成功猜出密碼");  //顯示遊戲規則
     }
     public void gofinish(View v){     //結束遊戲
     finish();

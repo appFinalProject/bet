@@ -2,7 +2,7 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/root"
+    android:id="@+id/compare"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/back2"
@@ -10,31 +10,32 @@
     tools:context=".MainActivity2">
 
     <TextView
-        android:id="@+id/win"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="192dp"
+        android:id="@+id/winning"
+        android:layout_width="162dp"
+        android:layout_height="99dp"
+        android:layout_marginTop="84dp"
         android:background="#FAF493"
-        android:textSize="34sp"
+        android:text="                  "
+        android:textSize="25sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/Rival"
-        app:layout_constraintHorizontal_bias="0.4"
-        app:layout_constraintStart_toStartOf="@+id/ME"
-        app:layout_constraintTop_toBottomOf="@+id/money"
+        app:layout_constraintEnd_toEndOf="@+id/pointrival"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/multt"
+        app:layout_constraintTop_toBottomOf="@+id/money500"
         tools:visibility="invisible" />
 
     <RadioGroup
-        android:id="@+id/mul"
-        android:layout_width="187dp"
-        android:layout_height="131dp"
+        android:id="@+id/multt"
+        android:layout_width="198dp"
+        android:layout_height="135dp"
         android:layout_marginTop="96dp"
         android:layout_marginEnd="12dp"
         android:background="#C6F2F8"
-        app:layout_constraintEnd_toStartOf="@+id/Rival"
-        app:layout_constraintTop_toTopOf="@+id/money">
+        app:layout_constraintEnd_toStartOf="@+id/pointrival"
+        app:layout_constraintTop_toTopOf="@+id/money500">
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/multime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="請選擇倍率"
@@ -42,7 +43,7 @@
             android:textSize="16sp" />
 
         <RadioButton
-            android:id="@+id/x3"
+            android:id="@+id/xx3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:checked="true"
@@ -50,14 +51,14 @@
             android:textSize="20sp" />
 
         <RadioButton
-            android:id="@+id/x5"
+            android:id="@+id/xx5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="5X"
             android:textSize="20sp" />
 
         <RadioButton
-            android:id="@+id/x10"
+            android:id="@+id/xx10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="10X"
@@ -65,19 +66,19 @@
     </RadioGroup>
 
     <LinearLayout
-        android:id="@+id/ME"
+        android:id="@+id/MEee"
         android:layout_width="183dp"
         android:layout_height="74dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/btn"
-        app:layout_constraintEnd_toEndOf="@+id/betline"
+        app:layout_constraintBottom_toTopOf="@+id/shake"
+        app:layout_constraintEnd_toEndOf="@+id/betlineee"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/betline"
-        app:layout_constraintTop_toBottomOf="@+id/betline"
+        app:layout_constraintStart_toStartOf="@+id/betlineee"
+        app:layout_constraintTop_toBottomOf="@+id/betlineee"
         app:layout_constraintVertical_bias="0.507">
 
         <TextView
-            android:id="@+id/textView7"
+            android:id="@+id/pointme"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="您的點數:"
@@ -85,42 +86,42 @@
             android:textSize="16sp" />
 
         <ImageView
-            android:id="@+id/image2"
+            android:id="@+id/p2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:visibility="gone"
             app:srcCompat="@drawable/d2" />
 
         <ImageView
-            android:id="@+id/image"
+            android:id="@+id/p1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:visibility="gone"
             app:srcCompat="@drawable/d1" />
 
         <ImageView
-            android:id="@+id/image3"
+            android:id="@+id/p3"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:visibility="gone"
             app:srcCompat="@drawable/d3" />
 
         <ImageView
-            android:id="@+id/image5"
+            android:id="@+id/p5"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:visibility="gone"
             app:srcCompat="@drawable/d5" />
 
         <ImageView
-            android:id="@+id/image4"
+            android:id="@+id/p4"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:visibility="gone"
             app:srcCompat="@drawable/d4" />
 
         <ImageView
-            android:id="@+id/image6"
+            android:id="@+id/p6"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:visibility="gone"
@@ -129,7 +130,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tV"
         android:layout_width="184dp"
         android:layout_height="43dp"
         android:layout_marginEnd="136dp"
@@ -138,14 +139,14 @@
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/bigor"
-        app:layout_constraintEnd_toStartOf="@+id/money"
+        app:layout_constraintEnd_toStartOf="@+id/money500"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/mul"
+        app:layout_constraintStart_toStartOf="@+id/multt"
         app:layout_constraintTop_toTopOf="@+id/guideline3"
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/money"
+        android:id="@+id/money500"
         android:layout_width="178dp"
         android:layout_height="43dp"
         android:layout_marginTop="16dp"
@@ -153,7 +154,7 @@
         android:text="目前獎金:500 元"
         android:textColor="#222F75"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/Rival"
+        app:layout_constraintEnd_toEndOf="@+id/pointrival"
         app:layout_constraintTop_toTopOf="parent" />
 
     <android.support.constraint.Guideline
@@ -164,14 +165,14 @@
         app:layout_constraintGuide_begin="20dp" />
 
     <ImageView
-        android:id="@+id/btn"
+        android:id="@+id/shake"
         android:layout_width="140dp"
         android:layout_height="157dp"
         android:layout_marginBottom="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/Rival"
+        app:layout_constraintEnd_toEndOf="@+id/pointrival"
         app:layout_constraintHorizontal_bias="0.419"
-        app:layout_constraintStart_toStartOf="@+id/ME"
+        app:layout_constraintStart_toStartOf="@+id/MEee"
         app:srcCompat="@drawable/die" />
 
     <android.support.constraint.Guideline
@@ -182,18 +183,18 @@
         app:layout_constraintGuide_begin="20dp" />
 
     <LinearLayout
-        android:id="@+id/betline"
+        android:id="@+id/betlineee"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginBottom="36dp"
         android:background="#C6F2F8"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/Rival"
+        app:layout_constraintBottom_toTopOf="@+id/pointrival"
         app:layout_constraintStart_toStartOf="@+id/guideline">
 
         <TextView
-            android:id="@+id/betmoney"
+            android:id="@+id/betmoneyset"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -201,7 +202,7 @@
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/edtmoney"
+            android:id="@+id/edtmonyy"
             android:layout_width="185dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -219,18 +220,18 @@
         app:layout_constraintGuide_begin="42dp" />
 
     <LinearLayout
-        android:id="@+id/Rival"
+        android:id="@+id/pointrival"
         android:layout_width="0dp"
         android:layout_height="73dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="76dp"
         android:layout_marginEnd="6dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/btn"
+        app:layout_constraintBottom_toTopOf="@+id/shake"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/ME"
-        app:layout_constraintTop_toBottomOf="@+id/money"
+        app:layout_constraintStart_toEndOf="@+id/MEee"
+        app:layout_constraintTop_toBottomOf="@+id/money500"
         app:layout_constraintVertical_bias="0.845">
 
         <TextView
@@ -243,7 +244,7 @@
             android:textSize="16sp" />
 
         <ImageView
-            android:id="@+id/imageView6"
+            android:id="@+id/i6"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="0"
@@ -252,7 +253,7 @@
             tools:visibility="gone" />
 
         <ImageView
-            android:id="@+id/imageView5"
+            android:id="@+id/i5"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="0"
@@ -261,7 +262,7 @@
             tools:visibility="gone" />
 
         <ImageView
-            android:id="@+id/imageView4"
+            android:id="@+id/i4"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="0"
@@ -270,7 +271,7 @@
             tools:visibility="gone" />
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/i3"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="0"
@@ -279,7 +280,7 @@
             tools:visibility="gone" />
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/i2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="0"
@@ -288,7 +289,7 @@
             tools:visibility="gone" />
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/i1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="0"
@@ -306,20 +307,20 @@
         android:clickable="true"
         android:entries="@array/bigor"
         android:spinnerMode="dropdown"
-        app:layout_constraintBottom_toTopOf="@+id/mul"
-        app:layout_constraintStart_toStartOf="@+id/mul" />
+        app:layout_constraintBottom_toTopOf="@+id/multt"
+        app:layout_constraintStart_toStartOf="@+id/multt" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/poi"
         android:layout_width="138dp"
         android:layout_height="147dp"
         android:onClick="onClick"
         android:text="Button"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/btn"
-        app:layout_constraintEnd_toEndOf="@+id/btn"
-        app:layout_constraintStart_toStartOf="@+id/btn"
-        app:layout_constraintTop_toTopOf="@+id/btn"
+        app:layout_constraintBottom_toBottomOf="@+id/shake"
+        app:layout_constraintEnd_toEndOf="@+id/shake"
+        app:layout_constraintStart_toStartOf="@+id/shake"
+        app:layout_constraintTop_toTopOf="@+id/shake"
         app:layout_constraintVertical_bias="0.0" />
 
 </android.support.constraint.ConstraintLayout>
