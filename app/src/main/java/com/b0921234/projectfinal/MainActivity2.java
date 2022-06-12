@@ -203,7 +203,7 @@ public class MainActivity2 extends AppCompatActivity implements TextWatcher,Radi
             money500.setText("目前金額:" + count+"元");
             if(count>=2000){
                 winnig.setVisibility(View.VISIBLE);
-                winnig.setText("  您已過關!\n   返回玩猜密碼");
+                winnig.setText("  您已過關!\n 返回玩猜密碼");
                 winnig.setTextColor(Color.parseColor("#E91E63"));
                 winnig.setBackgroundColor(Color.parseColor("#FAF493"));
             }

@@ -10,8 +10,8 @@
 
     <LinearLayout
         android:id="@+id/bbb"
-        android:layout_width="194dp"
-        android:layout_height="185dp"
+        android:layout_width="200dp"
+        android:layout_height="189dp"
         android:layout_marginEnd="4dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="@+id/rest"

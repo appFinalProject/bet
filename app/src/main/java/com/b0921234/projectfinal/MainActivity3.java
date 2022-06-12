@@ -58,26 +58,27 @@ public class MainActivity3 extends AppCompatActivity implements TextWatcher,View
         if (input >= 0 && input <= 99) {
             if (time <= 0) {
                 show.setText("遊戲結束\n");
+                findViewById(R.id.bomb).setVisibility(View.GONE);
+                findViewById(R.id.boom).setVisibility(View.VISIBLE);
             } else if (time > 0) {
+
 
                     if (pass != input) {
                         time = time - 1;
-                        rest.setText("剩餘次數: "+time+"次");
+                        rest.setText("剩餘次數: " + time + "次");
                         if (pass > input) {
-                            show.setText(input+" 這個數字太小囉~ \n");
+                            show.setText(input + " 這個數字太小囉~ \n");
                         }
                         if (pass < input) {
-                            show.setText(input+" 這個數字太大囉~ \n");
+                            show.setText(input + " 這個數字太大囉~ \n");
                         }
-                    }
-                    else if (pass == input) {
-                        show.setText("密碼是: "+pass+"恭喜!您答對了!\n");
-                        findViewById(R.id.bomb).setVisibility(View.GONE);
-                        findViewById(R.id.boom).setVisibility(View.VISIBLE);
+                    } else if (pass == input) {
+                        show.setText("密碼是: " + pass + "恭喜!您答對了!\n");
+
                     } else {
 
                     }
-
+                
             }
 
         }
